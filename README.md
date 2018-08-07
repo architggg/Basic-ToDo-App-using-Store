@@ -1,6 +1,6 @@
 # Todo
+This project describes basic knowledge on ngrx/store in Angular.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
 ## Development server
 
