@@ -1,0 +1,26 @@
+<div style="border: slategrey solid ; text-align:center">
+  <br>
+  Item Name : &nbsp; <input type=text placeholder = "Item Name" [(ngModel)]="name"><br><br>
+  Start Date : &nbsp; <input type="date" [(ngModel)]="startDate"><br><br>
+  End Date : &nbsp; <input type="date" [(ngModel)]="endDate"><br><br>
+  <button (click)="addItem()">Add</button>
+  <br><br>
+</div>
+<div *ngIf="items" style="text-align:center">
+    <h3>Todo Items Added</h3>
+  <table align = "center">
+    <tbody>
+      <tr *ngFor = "let item of items; let i = index">
+        <td style="border: 1px solid"><input type="text" [value]=item.itemName disabled ></td>
+        <td style="border: 1px solid"><input type="date" [value]=item.startDate disabled></td>
+        <td style="border: 1px solid"><input type="date" [value]=item.endDate disabled></td>
+        <td><button (click)="removeItem(i)">Remove Item</button></td>
+      <tr>
+      </tr>
+      <tr [hidden]="added">
+        <td></td>
+        <td><button (click) = "submit()" >Submit</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
